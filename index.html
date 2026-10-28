@@ -734,6 +734,47 @@ main .rp-end p,main .rp-end small{text-align:center!important}
 .sdt>div{display:flex;align-items:flex-start;gap:10px}
 .sdt .chip{background:#fff;flex:0 0 auto;min-width:104px;text-align:center;font-size:12px;padding:4px 10px;margin-top:2px}
 .lb-b .sdt p,.sdt p{font-size:13px!important;line-height:1.55;margin:0;text-align:left!important;hyphens:none}
+
+/* Refleksi mata kuliah: alur perjalanan */
+.rj-wrap{position:relative;display:grid;gap:26px;padding-left:38px;max-width:1000px}
+.rj-wrap::before{content:"";position:absolute;left:11px;top:34px;bottom:34px;width:4px;border-radius:4px;background:linear-gradient(#F59E0B,#FF5C8A,#18B4D6)}
+.rj{position:relative;background:var(--white);border:1px solid var(--line);border-radius:30px 10px 30px 10px;box-shadow:0 14px 34px -22px rgba(60,40,160,.4)}
+.rj::before{content:"";position:absolute;left:-36px;top:30px;width:22px;height:22px;border-radius:50%;background:var(--c);border:5px solid var(--paper);box-sizing:border-box;box-shadow:0 0 0 2px var(--c)}
+.rj-h{display:flex;align-items:center;justify-content:space-between;gap:12px 18px;flex-wrap:wrap;background:var(--bg);border-radius:29px 9px 0 0;padding:20px 30px;border-bottom:3px solid var(--c)}
+.rj-h h3{font:800 19px/1.35 var(--head);letter-spacing:-.01em;color:var(--ink);flex:1 1 280px}
+.rj-h .rj-sem{flex:none;font:700 13px var(--head);color:var(--ink);background:var(--white);border:2px solid var(--c);border-radius:999px;padding:5px 16px}
+.rj-b{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.rj-b section{padding:24px 30px 8px}
+.rj-b section+section{border-left:1px dashed var(--line)}
+.rj h4{font:800 15px/1.3 var(--head);color:var(--ink);margin-bottom:8px;display:flex;align-items:center;gap:9px}
+.rj h4::before{content:"";flex:none;width:10px;height:10px;border-radius:3px;background:var(--c)}
+.rj .rj-b p,.rj .rj-q p{font-size:15.5px;line-height:1.8;color:#2B2F52;text-align:justify!important;text-justify:inter-word;hyphens:auto!important}
+.rj-k{margin:14px 0 14px}
+.rj-k small{display:block;font:700 12.5px var(--head);color:var(--muted);margin-bottom:6px}
+.rj-k span{display:inline-block;font:700 13px var(--head);color:var(--ink);background:var(--bg);border:1.5px solid var(--c);border-radius:999px;padding:4px 13px;margin:0 6px 6px 0}
+.rj-q{margin:18px 30px 26px;padding:16px 20px 18px;background:var(--bg);border-left:6px solid var(--c);border-radius:6px 18px 18px 6px}
+.rj-q h4::before{display:none}
+@media(max-width:760px){.rj-wrap{padding-left:26px}.rj-wrap::before{left:6px}.rj::before{left:-26px;top:24px;width:18px;height:18px;border-width:4px}.rj-b{grid-template-columns:1fr}.rj-b section+section{border-left:0;border-top:1px dashed var(--line)}.rj-h{padding:16px 20px}.rj-b section{padding:20px 20px 4px}.rj-q{margin:14px 20px 22px}.rj .rj-b p,.rj .rj-q p{font-size:15px}}
+
+/* Refleksi: tautan semester */
+.rl{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1000px;margin:0 0 26px}
+.rl-a{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink);background:var(--white);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:8px 22px 22px 8px;padding:16px 20px;box-shadow:0 12px 28px -22px rgba(60,40,160,.45);transition:transform .2s,box-shadow .2s}
+.rl-a:hover,.rl-a:focus-visible{transform:translateY(-2px);box-shadow:0 16px 30px -20px rgba(60,40,160,.55)}
+.rl-a:focus-visible{outline:3px solid var(--c);outline-offset:2px}
+.rl-a div{flex:1;min-width:0}
+.rl-a small{display:block;font:700 13px var(--head);color:var(--muted)}
+.rl-a b{display:block;font:800 16px/1.35 var(--head)}
+.rl-a svg{flex:none;width:36px;height:36px;padding:8px;border-radius:50%;background:var(--c);color:#fff}
+@media(max-width:640px){.rl{grid-template-columns:1fr}}
+/* Refleksi: pandangan tentang pendidikan (satu paragraf) */
+.rv{max-width:1000px;background:var(--white);border:1px solid var(--line);border-radius:30px 10px 30px 10px;box-shadow:0 14px 34px -22px rgba(60,40,160,.4);overflow:hidden}
+.rv-h{background:var(--sky);border-bottom:3px solid var(--blue);padding:20px 32px}
+.rv-h h3{font:800 clamp(20px,2.6vw,25px)/1.3 var(--head);letter-spacing:-.01em;color:var(--ink)}
+.rv .rv-p{padding:28px 32px 32px;font-size:17px;line-height:2;color:#2B2F52;text-align:justify!important;text-justify:inter-word;hyphens:auto!important}
+.rv .hl{font-weight:700;color:var(--ink);background:linear-gradient(transparent 56%,var(--hc) 56%);border-radius:3px;padding:0 2px}
+@media(max-width:640px){.rv-h{padding:16px 20px}.rv .rv-p{padding:22px 20px 26px;font-size:16px;line-height:1.9}}
+/* Seluruh teks rata kanan-kiri */
+main .sdt p,main .lb-q,#dokumentasi figure .dk-c span,.lb-b .sdt p{text-align:justify!important;text-justify:inter-word;hyphens:auto!important;-webkit-hyphens:auto}
 </style>
 </head>
 <body>
@@ -858,29 +899,47 @@ main .rp-end p,main .rp-end small{text-align:center!important}
   <p class="lead">Catatan perjalanan belajar saya selama mengikuti PPG Prajabatan.</p>
   <div class="tabset">
     <div class="tabs" role="tablist">
-      <button class="tab" data-t="r-1">Refleksi Mata Kuliah Semester 1</button>
-      <button class="tab" data-t="r-2">Refleksi Mata Kuliah Semester 2</button>
+      <button class="tab" data-t="r-1">Refleksi Mata Kuliah Semester 1 dan 2</button>
       <button class="tab" data-t="r-3">Refleksi Belajar selama PPG</button>
     </div>
 
     <div class="panel" id="r-1">
-      <!-- EDIT: teks refleksi tiap cabang ada di <span class="d"> pada tombol -->
-      <div class="mm nodet" data-sem="s1"><svg class="mm-l" aria-hidden="true"></svg>
-      <a class="mm-c" href="https://arnettaa.github.io/Portofolio-DefArnetta/" target="_blank" rel="noopener" title="Buka refleksi semester 1"><div>Refleksi<small>Semester 1</small><em>Buka refleksi &#8599;</em></div></a><button class="mm-n" style="--c:#6C4CF1"><i>1</i><span class="t">Filosofi Pendidikan</span><span class="d">Tuliskan refleksi Anda pada mata kuliah Filosofi Pendidikan: apa yang dipelajari, manfaatnya, dan perubahan cara pandang Anda sebagai calon guru.</span></button><button class="mm-n" style="--c:#FF5C8A"><i>2</i><span class="t">Pengembangan Kebugaran Jasmani</span><span class="d">Tuliskan refleksi Anda pada mata kuliah Pengembangan Kebugaran Jasmani: apa yang dipelajari, manfaatnya, dan perubahan cara pandang Anda sebagai calon guru.</span></button><button class="mm-n" style="--c:#18B4D6"><i>3</i><span class="t">Growth Mindset</span><span class="d">Tuliskan refleksi Anda pada mata kuliah Growth Mindset: apa yang dipelajari, manfaatnya, dan perubahan cara pandang Anda sebagai calon guru.</span></button><button class="mm-n" style="--c:#F59E0B"><i>4</i><span class="t">Pembelajaran Mendalam dan Asesmen Dasar di SMK (PMAD)</span><span class="d">Tuliskan refleksi Anda pada mata kuliah Pembelajaran Mendalam dan Asesmen Dasar di SMK (PMAD): apa yang dipelajari, manfaatnya, dan perubahan cara pandang Anda sebagai calon guru.</span></button><button class="mm-n" style="--c:#10B981"><i>5</i><span class="t">Pemahaman Peserta Didik dan Pembelajarannya</span><span class="d">Tuliskan refleksi Anda pada mata kuliah Pemahaman Peserta Didik dan Pembelajarannya: apa yang dipelajari, manfaatnya, dan perubahan cara pandang Anda sebagai calon guru.</span></button></div>
-      
-    </div>
-
-    <div class="panel" id="r-2">
-      <!-- EDIT: teks refleksi tiap cabang ada di <span class="d"> pada tombol -->
-      <div class="mm nodet" data-sem="s2"><svg class="mm-l" aria-hidden="true"></svg>
-      <a class="mm-c" href="https://arnettaa.github.io/Refleksi_Smt2/" target="_blank" rel="noopener" title="Buka refleksi semester 2"><div>Refleksi<small>Semester 2</small><em>Buka refleksi &#8599;</em></div></a><button class="mm-n" style="--c:#6C4CF1"><i>1</i><span class="t">Pembelajaran Sosial Emosional</span><span class="d">Tuliskan refleksi Anda pada mata kuliah Pembelajaran Sosial Emosional: apa yang dipelajari, manfaatnya, dan perubahan cara pandang Anda sebagai calon guru.</span></button><button class="mm-n" style="--c:#FF5C8A"><i>2</i><span class="t">Pembelajaran Mendalam dan Asesmen Lanjut</span><span class="d">Tuliskan refleksi Anda pada mata kuliah Pembelajaran Mendalam dan Asesmen Lanjut: apa yang dipelajari, manfaatnya, dan perubahan cara pandang Anda sebagai calon guru.</span></button><button class="mm-n" style="--c:#18B4D6"><i>3</i><span class="t">Praktik Pengalaman Lapangan (PPL) Mandiri</span><span class="d">Tuliskan refleksi Anda pada mata kuliah Praktik Pengalaman Lapangan (PPL) Mandiri: apa yang dipelajari, manfaatnya, dan perubahan cara pandang Anda sebagai calon guru.</span></button><button class="mm-n" style="--c:#F59E0B"><i>4</i><span class="t">Projek Kepemimpinan</span><span class="d">Tuliskan refleksi Anda pada mata kuliah Projek Kepemimpinan: apa yang dipelajari, manfaatnya, dan perubahan cara pandang Anda sebagai calon guru.</span></button><button class="mm-n" style="--c:#10B981"><i>5</i><span class="t">Pendidikan Inklusi</span><span class="d">Tuliskan refleksi Anda pada mata kuliah Pendidikan Inklusi: apa yang dipelajari, manfaatnya, dan perubahan cara pandang Anda sebagai calon guru.</span></button></div>
-      
+      <div class="rl">
+        <a class="rl-a" style="--c:#6C4CF1" href="https://arnettaa.github.io/Portofolio-DefArnetta/" target="_blank" rel="noopener noreferrer"><div><small>Semester 1</small><b>Buka refleksi lengkap</b></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        <a class="rl-a" style="--c:#FF5C8A" href="https://arnettaa.github.io/Refleksi_Smt2/" target="_blank" rel="noopener noreferrer"><div><small>Semester 2</small><b>Buka refleksi lengkap</b></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="rj-wrap">
+      <article class="rj" style="--c:#F59E0B;--bg:#FFF6E0">
+        <div class="rj-h"><h3>Pembelajaran Mendalam dan Asesmen Dasar di SMK (PMAD)</h3><span class="rj-sem">Semester 1 &middot; merancang</span></div>
+        <div class="rj-b">
+          <section><h4>Yang saya pelajari</h4><p>Saya belajar bahwa pembelajaran yang baik tidak hanya membuat murid hafal materi, tetapi membuat mereka paham dan mampu menggunakannya. Pembelajaran mendalam berpegang pada tiga prinsip: berkesadaran, bermakna, dan menggembirakan. Saya juga belajar cara memantau proses dan hasil belajar murid melalui empat jenis asesmen: diagnostik, formatif, sumatif, dan assessment as learning.</p></section>
+          <section><h4>Kaitannya dengan inovasi saya</h4><p>Masalah di kelas XI PSPT 2 adalah murid yang pasif dan sulit berkonsentrasi karena pelajaran penulisan naskah film jatuh di jam siang. Ketiga prinsip tadi saya jadikan dasar Scriptwriter Challenge. Murid berkesadaran karena tahu tujuannya, yaitu menyusun cerita tiga babak. Murid merasakan kebermaknaan karena kartu acak berperan seperti brief dari produser, sama seperti pekerjaan penulis naskah sungguhan. Suasana pun menggembirakan karena ada kejutan kartu twist. Keempat jenis asesmen juga saya pakai: tanya jawab awal, pemantauan LKPD sebelum twist, penilaian dengan rubrik, serta komentar antarkelompok dan refleksi.</p></section>
+        </div>
+        <div class="rj-q"><h4>Perubahan cara pandang saya</h4><p>Sebelumnya saya mengira asesmen hanya dilakukan di akhir untuk memberi nilai. Sekarang saya melihat asesmen sebagai alat untuk membantu murid berkembang selama proses belajar.</p></div>
+      </article>
+      <article class="rj" style="--c:#FF5C8A;--bg:#FFEEF3">
+        <div class="rj-h"><h3>Pembelajaran Mendalam dan Asesmen Lanjut</h3><span class="rj-sem">Semester 2 &middot; mengembangkan</span></div>
+        <div class="rj-b">
+          <section><h4>Yang saya pelajari</h4><p>Mata kuliah ini melanjutkan PMAD. Saya belajar menerapkan pembelajaran mendalam dan asesmen ke dalam rancangan pembelajaran yang utuh, mulai dari menentukan tujuan, merancang kegiatan, sampai menyusun rubrik dan umpan balik yang membantu murid memperbaiki karyanya.</p></section>
+          <section><h4>Kaitannya dengan inovasi saya</h4><p>Pada uji coba game dojo, murid memang lebih antusias, fokus, dan aktif. Namun kegiatannya baru sebatas menjawab soal dan belum menghasilkan karya. Dari refleksi itu saya mengembangkannya menjadi Scriptwriter Challenge, yaitu murid menyusun sinopsis dan treatment tiga babak secara berkelompok. Karya mereka dinilai dengan rubrik, dan sebelum kartu twist diberikan, saya memberi umpan balik pada hasil Babak 1 agar murid bisa memperbaiki ceritanya.</p></section>
+        </div>
+        <div class="rj-q"><h4>Perubahan cara pandang saya</h4><p>Saya belajar bahwa pembelajaran yang seru belum cukup. Pembelajaran juga harus menghasilkan karya nyata yang bisa dinilai dan diperbaiki.</p></div>
+      </article>
+      <article class="rj" style="--c:#18B4D6;--bg:#E6F8FC">
+        <div class="rj-h"><h3>Praktik Pengalaman Lapangan (PPL) Mandiri</h3><span class="rj-sem">Semester 2 &middot; menerapkan</span></div>
+        <div class="rj-b">
+          <section><h4>Yang saya pelajari</h4><p>PPL Mandiri adalah kesempatan saya mengajar langsung di kelas. Di sini saya belajar membaca kondisi murid, menyesuaikan rencana dengan situasi nyata, dan mengevaluasi diri setelah mengajar.</p></section>
+          <section><h4>Kaitannya dengan inovasi saya</h4><p>Scriptwriter Challenge saya terapkan di kelas dengan 33 murid yang dibagi menjadi 6 kelompok. Semua murid terlihat aktif berpikir dan bertukar ide. Mereka antusias menemukan ide cerita dari kartu, dan hampir semua kelompok mampu menyesuaikan alur ceritanya ketika mendapat kartu twist. Setelah pelajaran, saya mengevaluasi praktik mengajar saya untuk perbaikan di pertemuan berikutnya.</p></section>
+        </div>
+        <div class="rj-q"><h4>Perubahan cara pandang saya</h4><p>Saya menyadari bahwa inovasi tidak selesai saat dirancang. Guru perlu mengamati, mengevaluasi, dan memperbaikinya terus-menerus. Peran guru pun bergeser dari menyampaikan materi menjadi merancang pengalaman belajar yang membuat murid terlibat dan menghasilkan karya.</p></div>
+      </article>
+      </div>
     </div>
 
     <div class="panel" id="r-3">
-      <div class="card rs-one">
-        <span class="rp-kick">Bagaimana seharusnya pendidikan di Indonesia?</span>
-        <p>Setelah menjalani rangkaian pembelajaran di PPG, saya memandang bahwa pendidikan di Indonesia seharusnya berpusat pada murid dan berpijak pada filosofi yang memanusiakan. Seperti gagasan Ki Hadjar Dewantara, guru bertugas menuntun tumbuhnya kodrat setiap anak, bukan menyeragamkan mereka. Pembelajaran juga harus bermakna dan mendalam (berkesadaran, bermakna, dan menggembirakan), termasuk di SMK, agar murid tidak hanya hafal materi tetapi mampu menerapkannya pada dunia kerja yang nyata. Untuk itu, pendidikan perlu inklusif: setiap murid dikenali kebutuhannya melalui asesmen awal, diberi ruang belajar yang aman, dan dilayani dengan pembelajaran yang berdiferensiasi, termasuk murid dengan disabilitas. Pendidikan juga perlu memperhatikan sisi sosial emosional dan jasmani murid, serta menumbuhkan growth mindset, yaitu keyakinan bahwa kemampuan dapat berkembang melalui usaha dan umpan balik. Dengan demikian, sekolah menjadi tempat tumbuh yang utuh, bukan sekadar tempat mengejar nilai.</p>
+      <div class="rv">
+        <div class="rv-h"><h3>Bagaimana seharusnya pendidikan di Indonesia?</h3></div>
+        <p class="rv-p">Setelah menjalani rangkaian pembelajaran di PPG, saya memandang bahwa pendidikan di Indonesia seharusnya <span class="hl" style="--hc:#D9D0FF">berpusat pada murid</span> dan berpijak pada <span class="hl" style="--hc:#D9D0FF">filosofi yang memanusiakan</span>. Seperti gagasan Ki Hadjar Dewantara, guru bertugas menuntun tumbuhnya kodrat setiap anak, bukan menyeragamkan mereka. Pembelajaran juga harus <span class="hl" style="--hc:#FFE3A3">bermakna dan mendalam</span> (berkesadaran, bermakna, dan menggembirakan), termasuk di SMK, agar murid tidak hanya hafal materi tetapi mampu menerapkannya pada dunia kerja yang nyata. Untuk itu, pendidikan perlu <span class="hl" style="--hc:#BDEFFA">inklusif</span>: setiap murid dikenali kebutuhannya melalui asesmen awal, diberi ruang belajar yang aman, dan dilayani dengan pembelajaran yang berdiferensiasi, termasuk murid dengan disabilitas. Pendidikan juga perlu memperhatikan sisi <span class="hl" style="--hc:#FFC9DA">sosial emosional dan jasmani</span> murid, serta menumbuhkan <span class="hl" style="--hc:#FFC9DA">growth mindset</span>, yaitu keyakinan bahwa kemampuan dapat berkembang melalui usaha dan umpan balik. Dengan demikian, sekolah menjadi tempat tumbuh yang utuh, bukan sekadar tempat mengejar nilai.</p>
       </div>
     </div>
   </div>
@@ -914,7 +973,6 @@ main .rp-end p,main .rp-end small{text-align:center!important}
       <button class="tab" data-t="i-id">Identitas Karya</button>
       <button class="tab" data-t="i-lb">Latar Belakang</button>
       <button class="tab" data-t="i-gr">Riset dan Landasan Teori</button>
-      <button class="tab" data-t="i-mk">Mata Kuliah Terkait</button>
       <button class="tab" data-t="i-pn">Penerapan Inovasi</button>
     </div>
 
@@ -1003,75 +1061,6 @@ main .rp-end p,main .rp-end small{text-align:center!important}
           <button class="mks-btn pv" type="button" aria-label="Halaman sebelumnya"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg><span>Sebelumnya</span></button>
           <div class="mks-dots">
             <button type="button"><b>1</b><span>Ikhtisar</span></button><button type="button"><b>2</b><span>Landasan</span></button><button type="button"><b>3</b><span>Keunggulan</span></button><button type="button"><b>4</b><span>Kebaruan</span></button>
-          </div>
-          <button class="mks-btn nx" type="button" aria-label="Halaman berikutnya"><span>Lanjut</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg></button>
-        </div>
-      </div>
-    </div>
-
-    <div class="panel" id="i-mk">
-      <div class="mks" tabindex="0" role="region" aria-roledescription="slide" aria-label="Keterkaitan dengan mata kuliah PMAD">
-        <div class="mks-bar" aria-hidden="true"><i></i></div>
-        <div class="mks-stage">
-
-          <section class="mk-sl">
-            <div class="mk-course">Mata kuliah PMAD</div>
-            <h3 class="mk-ht">Pembelajaran Mendalam dan Asesmen Dasar di SMK</h3>
-            <p class="mk-sub">Saya mengaitkan inovasi Scriptwriter Challenge dengan mata kuliah ini karena tiga alasan.</p>
-            <div class="mk-g3">
-              <div class="mk-r"><i>1</i><h4>Lahir dari masalah nyata di kelas</h4><p>Inovasi ini lahir dari masalah nyata di kelas, yaitu siswa yang pasif serta energi dan konsentrasi yang menurun di jam siang. Masalah ini saya jawab dengan tiga prinsip pembelajaran mendalam dari mata kuliah PMAD: berkesadaran, bermakna, dan menggembirakan.</p></div>
-              <div class="mk-r"><i>2</i><h4>Sesuai karakter pembelajaran SMK</h4><p>Kartu genre, karakter, tema, dan twist meniru situasi penulis naskah profesional yang bekerja dengan brief dari produser atau klien, lalu beradaptasi ketika ada revisi.</p></div>
-              <div class="mk-r"><i>3</i><h4>Produk perlu asesmen proses dan hasil</h4><p>Produk siswa berupa sinopsis dan treatment memerlukan asesmen yang mampu menilai proses sekaligus hasil.</p></div>
-            </div>
-          </section>
-
-          <section class="mk-sl">
-            <h3 class="mk-ht">Tiga prinsip pembelajaran mendalam</h3>
-            <p class="mk-sub">Prinsip dari mata kuliah PMAD yang saya terapkan dalam Scriptwriter Challenge.</p>
-            <div class="mk-g3">
-              <div class="mk-p" style="--c:#6C4CF1"><h4>Berkesadaran</h4><p>Siswa memahami tujuan belajar, yaitu menyusun cerita dengan struktur tiga babak, dan meninjau ulang keputusan cerita mereka saat twist muncul.</p></div>
-              <div class="mk-p" style="--c:#22A8C4"><h4>Bermakna</h4><p>Kartu acak berperan seperti brief dari produser atau klien, sehingga siswa berlatih mengolah ide dari batasan tertentu, sama seperti penulis naskah di industri. Dengan begitu, materi terhubung langsung dengan dunia kerja PSPT.</p></div>
-              <div class="mk-p" style="--c:#FF5C8A"><h4>Menggembirakan</h4><p>Pengambilan kartu acak dan kejutan twist menghadirkan rasa penasaran dan tantangan sehingga suasana kelas lebih hidup di jam siang.</p></div>
-            </div>
-          </section>
-
-          <section class="mk-sl">
-            <h3 class="mk-ht">Alur pengalaman belajar</h3>
-            <p class="mk-sub">Pengalaman belajar bergerak dari memahami, mengaplikasi, hingga merefleksi.</p>
-            <div class="mk-flow">
-              <div class="mk-s" style="--c:#6C4CF1"><h4>Memahami</h4><p>Mempelajari struktur tiga babak, sinopsis, dan treatment.</p></div>
-              <div class="mk-s" style="--c:#B04CF1"><h4>Mengaplikasi</h4><p>Menulis sinopsis dan treatment dari kombinasi kartu.</p></div>
-              <div class="mk-s" style="--c:#FF5C8A"><h4>Merefleksi</h4><p>Meninjau ulang cerita setelah kartu twist dan merefleksikan proses serta hasilnya.</p></div>
-            </div>
-            <div class="mk-chips" style="margin-left:2px">Dimensi Profil Lulusan yang dikembangkan: <span class="chip">Kreativitas</span><span class="chip">Penalaran kritis</span><span class="chip">Kolaborasi</span><span class="chip">Komunikasi</span></div>
-          </section>
-
-          <section class="mk-sl">
-            <h3 class="mk-ht">Cara proses dan hasil belajar dipantau</h3>
-            <p class="mk-sub">Empat jenis asesmen yang saya gunakan.</p>
-            <div class="mk-g4">
-              <div class="mk-a" style="--c:#6C4CF1;--c-bg:#F3F0FF"><h4>Diagnostik</h4><p>Pengamatan keaktifan dan tanya jawab awal tentang struktur tiga babak.</p></div>
-              <div class="mk-a" style="--c:#22A8C4;--c-bg:#E8F8FC"><h4>Formatif</h4><p>Pemantauan pengerjaan LKPD babak 1 dan umpan balik sebelum twist.</p></div>
-              <div class="mk-a" style="--c:#FF5C8A;--c-bg:#FFEEF3"><h4>Sumatif</h4><p>Penilaian sinopsis dan treatment dengan rubrik.</p></div>
-              <div class="mk-a" style="--c:#8E4CF1;--c-bg:#F6EEFF"><h4>Assessment as learning</h4><p>Komentar antarkelompok dan refleksi.</p></div>
-            </div>
-          </section>
-
-          <section class="mk-sl">
-            <h3 class="mk-ht">Ringkasan</h3>
-            <p class="mk-sub">Inti keterkaitan Scriptwriter Challenge dengan mata kuliah PMAD.</p>
-            <div class="mk-sum"><p>Scriptwriter Challenge saya kaitkan dengan mata kuliah Pembelajaran Mendalam dan Asesmen Dasar di SMK karena inovasi ini lahir dari masalah nyata di kelas, yaitu siswa yang pasif serta energi dan konsentrasi yang menurun di jam siang. Masalah ini saya jawab dengan tiga prinsip pembelajaran mendalam dari mata kuliah tersebut: berkesadaran, bermakna, dan menggembirakan. Kartu genre, karakter, tema, dan twist menghadirkan pengalaman belajar yang meniru praktik penulis naskah di industri, sementara alur memahami, mengaplikasi, dan merefleksi membantu siswa menguasai struktur tiga babak secara mendalam. Asesmen diagnostik, formatif, sumatif, dan assessment as learning memastikan proses dan hasil belajar terpantau serta dapat diperbaiki secara berkelanjutan.</p></div>
-          </section>
-
-        </div>
-        <div class="mks-nav">
-          <button class="mks-btn pv" type="button" aria-label="Halaman sebelumnya"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg><span>Sebelumnya</span></button>
-          <div class="mks-dots">
-            <button type="button"><b>1</b><span>Alasan</span></button>
-            <button type="button"><b>2</b><span>Prinsip</span></button>
-            <button type="button"><b>3</b><span>Alur</span></button>
-            <button type="button"><b>4</b><span>Asesmen</span></button>
-            <button type="button"><b>5</b><span>Ringkasan</span></button>
           </div>
           <button class="mks-btn nx" type="button" aria-label="Halaman berikutnya"><span>Lanjut</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg></button>
         </div>
