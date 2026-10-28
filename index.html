@@ -775,6 +775,44 @@ main .rp-end p,main .rp-end small{text-align:center!important}
 @media(max-width:640px){.rv-h{padding:16px 20px}.rv .rv-p{padding:22px 20px 26px;font-size:16px;line-height:1.9}}
 /* Seluruh teks rata kanan-kiri */
 main .sdt p,main .lb-q,#dokumentasi figure .dk-c span,.lb-b .sdt p{text-align:justify!important;text-justify:inter-word;hyphens:auto!important;-webkit-hyphens:auto}
+
+/* Refleksi: satu kolom setelah poin inovasi dipindah */
+.rj-b{grid-template-columns:1fr}
+/* Tab Keterkaitan Mata Kuliah */
+.kx-h{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--c);color:#fff;border-radius:20px;padding:16px 20px;margin-bottom:16px;position:relative;overflow:hidden}
+.kx-h::after{content:"";position:absolute;right:-30px;top:-40px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.16)}
+.kx-no{flex:none;width:46px;height:46px;border-radius:14px;background:#fff;color:var(--c);font:800 22px var(--head);display:grid;place-items:center;transform:rotate(-6deg)}
+.kx-h div{flex:1 1 220px;position:relative;z-index:1}
+.kx-h small{display:block;font:700 12.5px var(--head);opacity:.92;margin-bottom:2px}
+.kx-h h3{font:800 clamp(16px,2vw,20px)/1.3 var(--head);letter-spacing:-.01em;color:#fff}
+.kx-h em{font:700 12.5px var(--head);font-style:normal;background:rgba(255,255,255,.22);border:1.5px solid rgba(255,255,255,.7);border-radius:999px;padding:5px 14px;position:relative;z-index:1}
+.kx-lb{font:800 14px var(--head);color:var(--ink);margin:16px 2px 10px;display:flex;align-items:center;gap:9px}
+.kx-lb::before{content:"";width:6px;height:18px;border-radius:3px;background:var(--c)}
+.kx-prob,.kx-note{background:#fff;border:1px solid var(--line);border-left:6px solid var(--c);border-radius:6px 18px 18px 6px;padding:13px 18px;margin-top:4px}
+.kx-note{margin-top:14px}
+.kx-prob b,.kx-note b{display:block;font:800 14px var(--head);color:var(--c);margin-bottom:4px}
+.kx-prob p,.kx-note p,.kx-c p,.kx-s p{font-size:14px;line-height:1.65;color:#2B2F52;text-align:left;margin:0}
+.kx-g3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.kx-g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kx-c{background:#fff;border:1px solid var(--line);border-top:5px solid var(--c);border-radius:16px;padding:14px 16px 16px;box-shadow:0 12px 24px -20px rgba(60,40,160,.5)}
+.kx-c i{width:28px;height:28px;border-radius:50%;background:var(--c);color:#fff;font:700 13px var(--head);font-style:normal;display:grid;place-items:center;margin-bottom:8px}
+.kx-c h4{font:800 15.5px var(--head);color:var(--c);margin-bottom:5px}
+.kx-a{background:var(--sky);border-radius:14px;padding:11px 14px;display:flex;flex-direction:column;gap:3px}
+.kx-a b{font:800 13.5px/1.3 var(--head);color:var(--ink)}
+.kx-a span{font-size:13px;line-height:1.5;color:var(--muted)}
+.kx-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.kx-s{position:relative;background:#fff;border:2px solid var(--c);border-radius:18px;padding:14px 18px 18px}
+.kx-s+.kx-s::before{content:"";position:absolute;left:-34px;top:50%;width:34px;height:3px;background:var(--c);transform:translateY(-50%)}
+.kx-s+.kx-s::after{content:"";position:absolute;left:-10px;top:50%;border:7px solid transparent;border-left:9px solid var(--c);border-right:0;transform:translateY(-50%)}
+.kx-s small{display:block;font:700 12px var(--head);color:var(--muted);margin-bottom:3px}
+.kx-s h4{font:800 17px var(--head);color:var(--c);margin-bottom:5px}
+.kx-stat{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px}
+.kx-stat>div{background:#fff;border:2px solid var(--c);border-radius:18px;padding:8px 20px;text-align:center;min-width:96px}
+.kx-stat strong{display:block;font:800 34px/1.1 var(--head);color:var(--c)}
+.kx-stat span{font:700 12.5px var(--head);color:var(--muted)}
+.kx-stat p{flex:1 1 240px;font-size:14.5px;line-height:1.65;color:#2B2F52;text-align:left;margin:0}
+@media(max-width:760px){.kx-g3,.kx-g4{grid-template-columns:1fr 1fr}.kx-flow{grid-template-columns:1fr;gap:26px}.kx-s+.kx-s::before{left:50%;top:-26px;width:3px;height:26px;transform:translateX(-50%)}.kx-s+.kx-s::after{left:50%;top:-10px;border:7px solid transparent;border-top:9px solid var(--c);border-bottom:0;transform:translateX(-50%)}}
+@media(max-width:520px){.kx-g3,.kx-g4{grid-template-columns:1fr}.kx-h em{display:none}}
 </style>
 </head>
 <body>
@@ -913,7 +951,6 @@ main .sdt p,main .lb-q,#dokumentasi figure .dk-c span,.lb-b .sdt p{text-align:ju
         <div class="rj-h"><h3>Pembelajaran Mendalam dan Asesmen Dasar di SMK (PMAD)</h3><span class="rj-sem">Semester 1 &middot; merancang</span></div>
         <div class="rj-b">
           <section><h4>Yang saya pelajari</h4><p>Saya belajar bahwa pembelajaran yang baik tidak hanya membuat murid hafal materi, tetapi membuat mereka paham dan mampu menggunakannya. Pembelajaran mendalam berpegang pada tiga prinsip: berkesadaran, bermakna, dan menggembirakan. Saya juga belajar cara memantau proses dan hasil belajar murid melalui empat jenis asesmen: diagnostik, formatif, sumatif, dan assessment as learning.</p></section>
-          <section><h4>Kaitannya dengan inovasi saya</h4><p>Masalah di kelas XI PSPT 2 adalah murid yang pasif dan sulit berkonsentrasi karena pelajaran penulisan naskah film jatuh di jam siang. Ketiga prinsip tadi saya jadikan dasar Scriptwriter Challenge. Murid berkesadaran karena tahu tujuannya, yaitu menyusun cerita tiga babak. Murid merasakan kebermaknaan karena kartu acak berperan seperti brief dari produser, sama seperti pekerjaan penulis naskah sungguhan. Suasana pun menggembirakan karena ada kejutan kartu twist. Keempat jenis asesmen juga saya pakai: tanya jawab awal, pemantauan LKPD sebelum twist, penilaian dengan rubrik, serta komentar antarkelompok dan refleksi.</p></section>
         </div>
         <div class="rj-q"><h4>Perubahan cara pandang saya</h4><p>Sebelumnya saya mengira asesmen hanya dilakukan di akhir untuk memberi nilai. Sekarang saya melihat asesmen sebagai alat untuk membantu murid berkembang selama proses belajar.</p></div>
       </article>
@@ -921,7 +958,6 @@ main .sdt p,main .lb-q,#dokumentasi figure .dk-c span,.lb-b .sdt p{text-align:ju
         <div class="rj-h"><h3>Pembelajaran Mendalam dan Asesmen Lanjut</h3><span class="rj-sem">Semester 2 &middot; mengembangkan</span></div>
         <div class="rj-b">
           <section><h4>Yang saya pelajari</h4><p>Mata kuliah ini melanjutkan PMAD. Saya belajar menerapkan pembelajaran mendalam dan asesmen ke dalam rancangan pembelajaran yang utuh, mulai dari menentukan tujuan, merancang kegiatan, sampai menyusun rubrik dan umpan balik yang membantu murid memperbaiki karyanya.</p></section>
-          <section><h4>Kaitannya dengan inovasi saya</h4><p>Pada uji coba game dojo, murid memang lebih antusias, fokus, dan aktif. Namun kegiatannya baru sebatas menjawab soal dan belum menghasilkan karya. Dari refleksi itu saya mengembangkannya menjadi Scriptwriter Challenge, yaitu murid menyusun sinopsis dan treatment tiga babak secara berkelompok. Karya mereka dinilai dengan rubrik, dan sebelum kartu twist diberikan, saya memberi umpan balik pada hasil Babak 1 agar murid bisa memperbaiki ceritanya.</p></section>
         </div>
         <div class="rj-q"><h4>Perubahan cara pandang saya</h4><p>Saya belajar bahwa pembelajaran yang seru belum cukup. Pembelajaran juga harus menghasilkan karya nyata yang bisa dinilai dan diperbaiki.</p></div>
       </article>
@@ -929,7 +965,6 @@ main .sdt p,main .lb-q,#dokumentasi figure .dk-c span,.lb-b .sdt p{text-align:ju
         <div class="rj-h"><h3>Praktik Pengalaman Lapangan (PPL) Mandiri</h3><span class="rj-sem">Semester 2 &middot; menerapkan</span></div>
         <div class="rj-b">
           <section><h4>Yang saya pelajari</h4><p>PPL Mandiri adalah kesempatan saya mengajar langsung di kelas. Di sini saya belajar membaca kondisi murid, menyesuaikan rencana dengan situasi nyata, dan mengevaluasi diri setelah mengajar.</p></section>
-          <section><h4>Kaitannya dengan inovasi saya</h4><p>Scriptwriter Challenge saya terapkan di kelas dengan 33 murid yang dibagi menjadi 6 kelompok. Semua murid terlihat aktif berpikir dan bertukar ide. Mereka antusias menemukan ide cerita dari kartu, dan hampir semua kelompok mampu menyesuaikan alur ceritanya ketika mendapat kartu twist. Setelah pelajaran, saya mengevaluasi praktik mengajar saya untuk perbaikan di pertemuan berikutnya.</p></section>
         </div>
         <div class="rj-q"><h4>Perubahan cara pandang saya</h4><p>Saya menyadari bahwa inovasi tidak selesai saat dirancang. Guru perlu mengamati, mengevaluasi, dan memperbaikinya terus-menerus. Peran guru pun bergeser dari menyampaikan materi menjadi merancang pengalaman belajar yang membuat murid terlibat dan menghasilkan karya.</p></div>
       </article>
@@ -973,6 +1008,7 @@ main .sdt p,main .lb-q,#dokumentasi figure .dk-c span,.lb-b .sdt p{text-align:ju
       <button class="tab" data-t="i-id">Identitas Karya</button>
       <button class="tab" data-t="i-lb">Latar Belakang</button>
       <button class="tab" data-t="i-gr">Riset dan Landasan Teori</button>
+      <button class="tab" data-t="i-mk">Keterkaitan Mata Kuliah</button>
       <button class="tab" data-t="i-pn">Penerapan Inovasi</button>
     </div>
 
@@ -1062,6 +1098,50 @@ main .sdt p,main .lb-q,#dokumentasi figure .dk-c span,.lb-b .sdt p{text-align:ju
           <div class="mks-dots">
             <button type="button"><b>1</b><span>Ikhtisar</span></button><button type="button"><b>2</b><span>Landasan</span></button><button type="button"><b>3</b><span>Keunggulan</span></button><button type="button"><b>4</b><span>Kebaruan</span></button>
           </div>
+          <button class="mks-btn nx" type="button" aria-label="Halaman berikutnya"><span>Lanjut</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="i-mk">
+      <div class="mks" tabindex="0" role="region" aria-roledescription="slide" aria-label="Keterkaitan mata kuliah dengan inovasi">
+        <div class="mks-bar" aria-hidden="true"><i></i></div>
+        <div class="mks-stage">
+          <section class="mk-sl kx" style="--c:#F59E0B"><header class="kx-h" style="--c:#F59E0B"><span class="kx-no">1</span><div><small>Semester 1 &middot; merancang</small><h3>Pembelajaran Mendalam dan Asesmen Dasar di SMK (PMAD)</h3></div><em>Kaitannya dengan inovasi saya</em></header>
+<div class="kx-prob"><b>Masalah di kelas</b><p>Masalah di kelas XI PSPT 2 adalah murid yang pasif dan sulit berkonsentrasi karena pelajaran penulisan naskah film jatuh di jam siang.</p></div>
+<p class="kx-lb">Tiga prinsip pembelajaran mendalam menjadi dasar Scriptwriter Challenge</p>
+<div class="kx-g3">
+<div class="kx-c" style="--c:#6C4CF1"><i>1</i><h4>Berkesadaran</h4><p>Murid tahu tujuannya, yaitu menyusun cerita tiga babak.</p></div>
+<div class="kx-c" style="--c:#18B4D6"><i>2</i><h4>Bermakna</h4><p>Kartu acak berperan seperti brief dari produser, sama seperti pekerjaan penulis naskah sungguhan.</p></div>
+<div class="kx-c" style="--c:#FF5C8A"><i>3</i><h4>Menggembirakan</h4><p>Ada kejutan kartu twist yang membuat suasana belajar hidup.</p></div>
+</div>
+<p class="kx-lb">Empat jenis asesmen yang saya pakai</p>
+<div class="kx-g4">
+<div class="kx-a"><b>Diagnostik</b><span>Tanya jawab awal</span></div>
+<div class="kx-a"><b>Formatif</b><span>Pemantauan LKPD sebelum twist</span></div>
+<div class="kx-a"><b>Sumatif</b><span>Penilaian dengan rubrik</span></div>
+<div class="kx-a"><b>Assessment as learning</b><span>Komentar antarkelompok dan refleksi</span></div>
+</div></section>
+          <section class="mk-sl kx" style="--c:#FF5C8A"><header class="kx-h" style="--c:#FF5C8A"><span class="kx-no">2</span><div><small>Semester 2 &middot; mengembangkan</small><h3>Pembelajaran Mendalam dan Asesmen Lanjut</h3></div><em>Kaitannya dengan inovasi saya</em></header>
+<p class="kx-lb">Dari uji coba game dojo menjadi Scriptwriter Challenge</p>
+<div class="kx-flow">
+<div class="kx-s" style="--c:#F59E0B"><small>Uji coba</small><h4>Game dojo</h4><p>Murid memang lebih antusias, fokus, dan aktif.</p></div>
+<div class="kx-s" style="--c:#6C4CF1"><small>Hasil refleksi</small><h4>Belum ada karya</h4><p>Kegiatannya baru sebatas menjawab soal dan belum menghasilkan karya.</p></div>
+<div class="kx-s" style="--c:#FF5C8A"><small>Pengembangan</small><h4>Scriptwriter Challenge</h4><p>Murid menyusun sinopsis dan treatment tiga babak secara berkelompok.</p></div>
+</div>
+<div class="kx-note"><b>Rubrik dan umpan balik</b><p>Karya mereka dinilai dengan rubrik, dan sebelum kartu twist diberikan, saya memberi umpan balik pada hasil Babak 1 agar murid bisa memperbaiki ceritanya.</p></div></section>
+          <section class="mk-sl kx" style="--c:#18B4D6"><header class="kx-h" style="--c:#18B4D6"><span class="kx-no">3</span><div><small>Semester 2 &middot; menerapkan</small><h3>Praktik Pengalaman Lapangan (PPL) Mandiri</h3></div><em>Kaitannya dengan inovasi saya</em></header>
+<div class="kx-stat"><div><strong>33</strong><span>murid</span></div><div><strong>6</strong><span>kelompok</span></div><p>Scriptwriter Challenge saya terapkan di kelas dengan 33 murid yang dibagi menjadi 6 kelompok.</p></div>
+<div class="kx-g3">
+<div class="kx-c" style="--c:#6C4CF1"><i>1</i><h4>Aktif berpikir</h4><p>Semua murid terlihat aktif berpikir dan bertukar ide.</p></div>
+<div class="kx-c" style="--c:#F59E0B"><i>2</i><h4>Antusias</h4><p>Mereka antusias menemukan ide cerita dari kartu.</p></div>
+<div class="kx-c" style="--c:#FF5C8A"><i>3</i><h4>Adaptif</h4><p>Hampir semua kelompok mampu menyesuaikan alur ceritanya ketika mendapat kartu twist.</p></div>
+</div>
+<div class="kx-note"><b>Evaluasi diri</b><p>Setelah pelajaran, saya mengevaluasi praktik mengajar saya untuk perbaikan di pertemuan berikutnya.</p></div></section>
+        </div>
+        <div class="mks-nav">
+          <button class="mks-btn pv" type="button" aria-label="Halaman sebelumnya"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg><span>Sebelumnya</span></button>
+          <div class="mks-dots"><button type="button"><b>1</b><span>PMAD</span></button><button type="button"><b>2</b><span>PMA Lanjut</span></button><button type="button"><b>3</b><span>PPL Mandiri</span></button></div>
           <button class="mks-btn nx" type="button" aria-label="Halaman berikutnya"><span>Lanjut</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l5 5-5 5"/></svg></button>
         </div>
       </div>
